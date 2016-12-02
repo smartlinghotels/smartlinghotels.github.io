@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="Hotel room booking services Park Hyatt New York">
+        <meta name="keywords" content="hotel, hotel room, hotel room booking, 
+              room booking, booking services, hotels near me, Park Hyatt, Park Hyatt NYC,
+              Park Hyatt New York, New York, New York City">
+        <meta name="author" content="Smartling">
+        <title> Park Hyatt New York | SmartlingHotels</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+
+        <style>.bg{
+                background: url("../../bg.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: inherit;
+                height: inherit;
+                z-index: -1;
+            }
+
+            .carousel-inner > .item > img {
+                margin: 0 auto;
+            }
+
+            .center-block {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            #es-only{
+                visibility: hidden;
+            }
+
+            .smartling-es #es-only{
+                visibility: visible;
+            }
+            
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $.getJSON("../../roomAvailability.json", {}, function (data) {
+                    /*<sl:translate>*/
+                    var roomsAvail = " rooms are available";
+                    /*</sl:translate>*/
+                    $("#roomsAvailable").text(data.hyatt + roomsAvail);
+                });
+
+                $.getJSON("../../reviews.json", {}, function (data) {
+                    $("#review").text(data.hyatt.review);
+                    $("#rating").text(data.hyatt.rating + " / 5");
+                });
+
+                $.getJSON("../../prices.json", {}, function (data) {
+                    $("#price").text("$" + data.hyatt.price);
+                });
+                
+                $.getJSON("../../usernames.json", {}, function (data) {
+                    $("#username").text(data.hyatt.user);
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="park-hyatt_info.html#" style="color: lightgray">SmartlingHotels</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="../../browse-hotels.html">Browse Hotels</a></li>
+                        <li><a href="../../about-us.html"> About Us</a></li>
+                        <li><a href="../../support.html">Customer Support</a></li>
+                        <li><a href="../../site-map.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron bg"  style="width: 100%; margin-top: 2%;">
+            <div style="background: rgba(0,0,0,.22); height: inherit; width: inherit;">
+                <h1 class="" style="text-align: center; color: white; 
+                    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;">
+                    SmartlingHotels
+                </h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 1% auto;">
+                <div class="center-block" style="max-width: fit-content;">
+                    <a class="btn btn-primary" href="../../hotel-results.html" role="button">Return to Search</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8" style="margin-bottom: 2%;">
+                    <!-- carousel-->
+                    <div class="carousel-holder">
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel" data-slide-to="2" class=""></li>
+                                <li data-target="#carousel" data-slide-to="3" class=""></li>
+                                <li data-target="#carousel" data-slide-to="4" class=""></li>
+                                <li data-target="#carousel" data-slide-to="5" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="hyatt1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="hyatt2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="hyatt3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="hyatt4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="hyatt5.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="hyatt6.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="park-hyatt_info.html#carousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="park-hyatt_info.html#carousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="h1" style="text-align: left;">
+                        <span id="roomsAvailable"></span> with prices starting at:
+                    </div>
+                    <div class="h2" style="color: red; text-align: right; font-weight: 700;"> 
+                        <span id="price"></span> per night
+                    </div>
+                    <div style="text-align: right">
+                        <a class="btn btn-primary" role="button">
+                            Click this Button to Make a Reservation
+                            <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+
+                    <hr>
+                    <!-- Customer Reviews-->
+                    <div>
+                        <div class="h2">
+                            Customer Reviews:
+                        </div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-body" style="background: #337ab7; color: white;">
+                                <div class="row col-md-12">
+                                    <blockquote>
+                                        <!--Review-->
+                                        <p><em id="review"></em></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="panel-footer" style="background: white;">
+                                <div class="row h4">
+                                    <div class="col-md-5">
+                                        <!--Rating-->
+                                        <div id="rating" style="color: blue; font-weight:900;"></div>
+                                    </div>
+                                    <div class="col-md-7" style="text-align: right">
+                                        <!--User-->
+                                        Review by: <a id="username"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary es-only" id="es-only">
+                            <div class="panel-body" style="background: #337ab7; color: white;">
+                                <div class="row col-md-12">
+                                    <blockquote>
+                                        <p><em>Una recepción discreta que anuncia un hotel diferente. Habitaciones con una decoración impecable, buena distribución de los espacios, excelente vista, buenas camas, lindo mobiliario. Un verdadero gusto a pocos metros de Central Park.</em></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="panel-footer" style="background: white;">
+                                <div class="row h4">
+                                    <div class="col-md-8">
+                                        <div style="color: blue; font-weight:900;">5 / 5</div>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: right">
+                                        Review by: <a>ASIPWS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- description -->
+                <div class="col-md-4">
+                    <div class="h1">Park Hyatt New York</div> <hr>
+                    <div class="h4">Location: <span class="notranslate"><br><small>153 West 57th Street <br>New York, NY 10019</small></span></div>
+                    <p>Located in the heart of Midtown Manhattan, our New York luxury hotel is situated directly across the street from Carnegie Hall and one block from Central Park. Designed by world-renowned, Pritzker Prize-winning architect Christian de Portzamparc, Park Hyatt New York features 210 generously sized guest rooms, including 92 luxury suites, designed by Yabu Pushelberg. Our stunning and state-of-the-art rooms are among the largest in New York City averaging 530 square feet and feature breathtaking views of the New York skyline and partial views of Central Park. </p>
+                    <p>Throughout our hotel, guests experience urbane spaces offering sophistication and elegance. Indulge in our oversized accommodations that combine luxury furnishings with high-tech amenities. Discover intimate experiences tailored to your individual preferences, from delectable cuisine at The Back Room to soothing body treatment at Spa Nalai. We take pleasure and pride in customizing each stay for traveling professionals and vacationing tourists, including being a pet friendly hotel. </p>
+                    <p>With its premier address on West 57th Street, Park Hyatt New York is nestled among the city’s top destinations and faces the world-famous Carnegie Hall. Experience the stunning acoustics of this performing arts and music venue across the street, or in our hotel with exclusive Carnegie Hall-related features. Raising the standards for New York luxury hotels, Park Hyatt New York delivers style and sophistication in every detail with beautifully articulated spaces that are functional and fashionable.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

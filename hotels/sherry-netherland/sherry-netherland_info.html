@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="Hotel room booking services The Sherry-Netherland">
+        <meta name="keywords" content="hotel, hotel room, hotel room booking, room booking, booking services, hotels near me, ">
+        <meta name="author" content="Smartling">
+        <title> The Sherry-Netherland | SmartlingHotels </span></title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+
+        <style>.bg{
+                background: url("../../bg.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: inherit;
+                height: inherit;
+                z-index: -1;
+            }
+
+            .carousel-inner > .item > img {
+                margin: 0 auto;
+            }
+
+            .center-block {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            #es-only{
+                visibility: hidden;
+            }
+
+            .smartling-es #es-only{
+                visibility: visible;
+            }
+
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $.getJSON("../../roomAvailability.json", {}, function (data) {
+                    /*<sl:translate>*/
+                    var roomsAvail = " rooms are available";
+                    /*</sl:translate>*/
+                    $("#roomsAvailable").text(data.sherry + roomsAvail);
+                });
+
+                $.getJSON("../../reviews.json", {}, function (data) {
+                    $("#review").text(data.sherry.review);
+                    $("#rating").text(data.sherry.rating + " / 5");
+                });
+
+                $.getJSON("../../prices.json", {}, function (data) {
+                    $("#price").text("$" + data.sherry.price);
+                });
+                
+                $.getJSON("../../usernames.json", {}, function (data) {
+                    $("#username").text(data.sherry.user);
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="sherry-netherland_info.html#" style="color: lightgray">SmartlingHotels</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="../../browse-hotels.html">Browse Hotels</a></li>
+                        <li><a href="../../about-us.html"> About Us</a></li>
+                        <li><a href="../../support.html">Customer Support</a></li>
+                        <li><a href="../../site-map.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron bg"  style="width: 100%; margin-top: 2%;">
+            <div style="background: rgba(0,0,0,.22); height: inherit; width: inherit;">
+                <h1 class="" style="text-align: center; color: white; 
+                    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;">
+                    SmartlingHotels
+                </h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 1% auto;">
+                <div class="center-block" style="max-width: fit-content;">
+                    <a class="btn btn-primary" href="../../hotel-results.html" role="button">Return to Search</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8" style="margin-bottom: 2%;">
+                    <!-- carousel-->
+                    <div class="carousel-holder">
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel" data-slide-to="2" class=""></li>
+                                <li data-target="#carousel" data-slide-to="3" class=""></li>
+                                <li data-target="#carousel" data-slide-to="4" class=""></li>
+                                <li data-target="#carousel" data-slide-to="5" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="sherry1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="sherry2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="sherry3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="sherry4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="sherry5.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="sherry6.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="sherry-netherland_info.html#carousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="sherry-netherland_info.html#carousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="h1" style="text-align: left;">
+                        <span id="roomsAvailable"></span> with prices starting at:
+                    </div>
+                    <div class="h2" style="color: red; text-align: right; font-weight: 700;"> 
+                        <span id="price"></span> per night
+                    </div>
+                    <div style="text-align: right">
+                        <a class="btn btn-primary" role="button">
+                            Click this Button to Make a Reservation
+                            <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+
+                    <hr>
+                    <!-- Customer Reviews-->
+                    <div>
+                        <div class="h2">
+                            Customer Reviews:
+                        </div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-body" style="background: #337ab7; color: white;">
+                                <div class="row col-md-12">
+                                    <blockquote>
+                                        <!--Review-->
+                                        <p><em id="review"></em></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="panel-footer" style="background: white;">
+                                <div class="row h4">
+                                    <div class="col-md-5">
+                                        <!--Rating-->
+                                        <div id="rating" style="color: blue; font-weight:900;"></div>
+                                    </div>
+                                    <div class="col-md-7" style="text-align: right">
+                                        <!--User-->
+                                        Review by: <a id="username"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary es-only" id="es-only">
+                            <div class="panel-body" style="background: #337ab7; color: white;">
+                                <div class="row col-md-12">
+                                    <blockquote>
+                                        <p><em>Estuve hospedado en Abril 2015, la ubicacion es inmejorable al lado de la tienda Apple y frente al Hotel Plaza. Nos dieron una habitacion con vista al interior, confortable, muy comoda, amplia y con todos los servicios, el wifi es gratuito, cafe, agua y bebidas no alcoholicas de la nevera son tambien gratis La atencion de todod el personal es excelente. En el mismo edificio esta el Restaurant Harry Cipriani donde hay que tomarse un Bellini (muy buenos), puedo afirmar que es una excelente opcion en New York</em></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="panel-footer" style="background: white;">
+                                <div class="row h4">
+                                    <div class="col-md-8">
+                                        <div style="color: blue; font-weight:900;">5 / 5</div>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: right">
+                                        Review by: <a>Antonio R.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="h1">The Sherry-Netherland Hotel</div> <hr>
+                    <div class="h4">Location: <span class="notranslate"> <br><small>781 5th Ave <br>New York, NY 10022</small></span></div>
+                    <p>Experience world-class accommodations and European-style service in an iconic Central Park hotel. Topped by an elaborate Gothic minaret, The Sherry-Netherland adds a note of drama and history to the Midtown Manhattan skyline. Just look for the signature sidewalk clock on Fifth Avenue that marks this Central Park hotel’s entrance. From exemplary service – including concierge assistance, elevator attendants and valet parking – to spacious, individually decorated rooms and suites, a stay at The Sherry has been an expression of privilege since 1927. Rely on this New York City luxury hotel to provide five-star service in a classic setting.</p>
+                    <p>Restored in 2014, the mural on the lobby ceiling has been returned to its original splendor as seen in the 1920s. Inspired by Raphael's frescoes in Cardinal Bibbiena's Loggetta in the Vatican Palace, artist Joseph Aruta designed the beautiful and intricate details. View images of the restored mural in this photo gallery.</p>
+                    <p>“We're at The Sherry” has been an expression of privilege since the hotel opened in 1927. Experience The Sherry's unsurpassed lifestyle in one of 50 spacious and individually decorated guest rooms and suites, some with Central Park views. Book your reservations online today for exclusive rates.</p>
+                    <p>Sherry-Netherland is a smoke-free hotel.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

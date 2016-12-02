@@ -1,0 +1,20 @@
+{
+    "hyatt": {
+            "user": "John Doe"
+    },
+    "crosby": {
+            "user": "Jane Doe"
+    },
+    "sherry": {
+        "user":"U.N. Owen"
+    },
+
+    "casablanca": {
+        "user":"Anonymous"
+    },
+
+    "broome": {
+        "user":"Bruce Wayne"
+    }
+       
+}

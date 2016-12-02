@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Hotel room booking services browse hotels hotel results">
+        <meta name="keywords" content="hotel, hotel room, hotel room booking, 
+              room booking, booking services, hotels near me, browse hotels, hotel results">
+        <meta name="author" content="Smartling">
+        <title>Browse Hotels | SmartlingHotels</title>
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <style>.bg{
+                background: url("bg.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: inherit;
+                height: inherit;
+                z-index: -1;
+            }
+
+            .center {
+                text-align:center;
+            }
+
+            .center form {
+                display:inline-block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="hotel-results.html#" style="color: lightgray">SmartlingHotels</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="browse-hotels.html">Browse Hotels</a></li>
+                        <li><a href="about-us.html"> About Us</a></li>
+                        <li><a href="support.html">Customer Support</a></li>
+                        <li><a href="site-map.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron bg"  style="width: 100%; margin-top: 2%;">
+            <div style="background: rgba(0,0,0,.22); height: inherit; width: inherit;">
+                <h1 class="" style="text-align: center; color: white; 
+                    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;">
+                    SmartlingHotels
+                </h1>
+            </div>
+        </div>
+
+        <div style="margin-top: 1%; padding: 5px 5px;">
+            <form class="center">
+                <select name="Location" style="max-width: fit-content; padding: 5.5px;">
+                    <option value="nyc">New York City</option>
+                </select>
+                <a class="btn btn-primary" href="hotel-results.html" role="button">Find Hotels</a>
+                <a class="btn btn-primary" href="browse-hotels.html" role="button">Revise Search</a>
+            </form>
+        </div>
+        
+        <div class="container">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="h1 col-md-8">
+                        Showing hotels located in "New York City"
+                    </div>
+                    <div class="h1 col-md-3 col-md-offset-1 text-right">
+                        <small>5 of 5 results shown.</small>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Park Hyatt -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="hotels/park%20hyatt/park-hyatt_info.html">
+                        <img class="img-responsive" src="hotels/park%20hyatt/hyatt_profile.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <div class="h3">Park Hyatt New York</div>
+                    <h4>Location: <span class="notranslate"><br><small>153 West 57th Street <br>New York, NY 10019</small></span></h4>
+                    <p>Located in the heart of Midtown Manhattan, our New York luxury hotel is situated directly across the street from Carnegie Hall and one block from Central Park. Designed by world-renowned, Pritzker Prize-winning architect Christian de Portzamparc, Park Hyatt New York features 210 generously sized guest rooms, including 92 luxury suites, designed by Yabu Pushelberg. Our stunning and state-of-the-art rooms are among the largest in New York City averaging 530 square feet and feature breathtaking views of the New York skyline and partial views of Central Park. </p>
+                    <a class="btn btn-primary" href="hotels/park%20hyatt/park-hyatt_info.html">Check Room Availability<span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Crosby Street -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="hotels/crosby%20street/crosby-st_info.html">
+                        <img class="img-responsive" src="hotels/crosby%20street/crosby_profile.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <div class="h3">Crosby Street Hotel</div>
+                    <h4>Location: <span class="notranslate"><br><small>79 Crosby Street <br> New York, NY 10012</small></span></h4>
+
+                    <p>Crosby Street Hotel is situated on a quiet cobbled street in the heart of New York's vibrant SoHo neighbourhood. There are 86 bedrooms and suites over 11 floors. </p> 
+                    <p>Interior design by Kit Kemp reflects a fresh, contemporary style. There is The Crosby Bar, a private leafy garden, guest drawing room, several stylish private event and meeting rooms, a luxurious 99 seat screening room and fully equipped gym.</p>
+
+                    <a class="btn btn-primary" href="hotels/crosby%20street/crosby-st_info.html">Check Room Availability<span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Sherry-Netherland -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="hotels/sherry-netherland/sherry-netherland_info.html">
+                        <img class="img-responsive" src="hotels/sherry-netherland/sherry_profile.jpg" alt="" width="700" height="300">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <div class="h3">Sherry-Netherland Hotel</div>
+                    <h4>Location: <span class="notranslate"><br><small>781 5th Ave <br>New York, NY 10022</small></span></h4>
+                    <p>Experience world-class accommodations and European-style service in an iconic Central Park hotel. Topped by an elaborate Gothic minaret, The Sherry-Netherland adds a note of drama and history to the Midtown Manhattan skyline. Just look for the signature sidewalk clock on Fifth Avenue that marks this Central Park hotel’s entrance. From exemplary service – including concierge assistance, elevator attendants and valet parking – to spacious, individually decorated rooms and suites, a stay at The Sherry has been an expression of privilege since 1927. Rely on this New York City luxury hotel to provide five-star service in a classic setting.</p>
+                    <a class="btn btn-primary" href="hotels/sherry-netherland/sherry-netherland_info.html">Check Room Availability<span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Casablanca -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="hotels/casablanca/casablanca_info.html">
+                        <img class="img-responsive" src="hotels/casablanca/casa_profile.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <div class="h3">Casablanca Hotel Times Square</div>
+                    <h4>Location: <span class="notranslate"><br><small>147 West 43rd Street <br>New York, NY 10036</small></span></h4>
+
+                    <p>The Casablanca Hotel Times Square is an intimate European-style family-owned boutique hotel in New York City's most popular location, Midtown Manhattan, where guests can escape from the hustle and bustle of the city and relax in front of a fireplace at Rick's Café, the Casablanca Hotel's warm and welcoming upstairs club room. Rick's Café serves complimentary refreshments 24 hours a day, including deluxe continental breakfast each morning and wine & cheese receptions every evening from 5 p.m. to 8 p.m. </p>
+                    <a class="btn btn-primary" href="hotels/casablanca/casablanca_info.html">Check Room Availability<span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Broome -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="hotels/broome/broome_info.html">
+                        <img class="img-responsive" src="hotels/broome/broome_profile.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <div class="h3">The Broome</div>
+                    <h4>Location: <span class="notranslate"><br><small>431 Broome street <br>New York, NY 10013</small></span></h4>
+
+                    <p>In the heart of New York City’s downtown is a one-of-a-kind hotel. Just turn the corner from SOHO’s celebrated shops and cafes, enter the doors where the staff greets you by name, and find yourself on our peaceful, secluded patio for refreshments and a heavenly view to the sky above. This architectural gem offers guests a rare pause in this exciting city. Welcome to The Broome. </p>
+                    <p>We’re proud to be your home away from home. We’ve paid attention to every detail – from the design of the property, the tastefully curated objects and modern amenities, to our personalized service – so that your stay is seamless, comfortable and memorable. </p>
+
+                    <a class="btn btn-primary" href="hotels/broome/broome_info.html">Check Room Availability<span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Pagination -->
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <ul class="pagination">
+                        <li>
+                            <a href="hotel-results.html#">«</a>
+                        </li>
+                        <li class="active">
+                            <a href="hotel-results.html#">1</a>
+                        </li>
+                        <li>
+                            <a href="hotel-results.html#">»</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright © Your Website 2016</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+
+        </div>
+
+    </body>
+</html>

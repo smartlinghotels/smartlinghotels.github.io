@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Browse Hotels | SmartlingHotels</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <style>.bg{
+                background: url("bg.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: inherit;
+                height: inherit;
+                z-index: -1;
+            }
+            
+            .center {text-align:center;}
+
+            .center form {display:inline-block;}
+        
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="browse-hotels.html#" style="color: lightgray">SmartlingHotels</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="browse-hotels.html">Browse Hotels</a></li>
+                        <li><a href="about-us.html"> About Us</a></li>
+                        <li><a href="support.html">Customer Support</a></li>
+                        <li><a href="site-map.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="jumbotron bg"  style="width: 100%; margin-top: 2%;">
+            <div style="background: rgba(0,0,0,.22); height: inherit; width: inherit;">
+                <h1 class="" style="text-align: center; color: white; 
+                    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;">
+                    SmartlingHotels
+                </h1>
+            </div>
+        </div>
+        
+        <div style="margin-top: 1%; padding: 5px 5px">
+            <form class="center">
+                <select name="Location" style="max-width: fit-content; padding: 5.5px;">
+                    <option value="location">Please input your location.</option>
+                    <option value="nyc">New York City</option>
+                </select>
+                <a class="btn btn-primary" href="hotel-results.html" role="button">Find Hotels</a>
+            </form>
+        </div>
+    </body>
+</html>

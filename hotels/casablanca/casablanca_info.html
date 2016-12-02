@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="Hotel room booking services Casablanca Hotel Times Square">
+        <meta name="keywords" content="hotel, hotel room, hotel room booking, 
+              room booking, booking services, hotels near me, Casablanca, Casablanca NYC, Times Square,
+              New York, New York City, NYC">
+        <meta name="author" content="Smartling">
+
+        <title> Casablanca Hotel - Times Square | SmartlingHotels</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+
+        <style>.bg{
+                background: url("../../bg.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: inherit;
+                height: inherit;
+                z-index: -1;
+            }
+
+            .carousel-inner > .item > img {
+                margin: 0 auto;
+            }
+
+            .center-block {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            #es-only{
+                visibility: hidden;
+            }
+
+            .smartling-es #es-only{
+                visibility: visible;
+            }
+
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $.getJSON("../../roomAvailability.json", {}, function (data) {
+                    /*<sl:translate>*/
+                    var roomsAvail = " rooms are available";
+                    /*</sl:translate>*/
+                    $("#roomsAvailable").text(data.casablanca + roomsAvail);
+                });
+
+                $.getJSON("../../reviews.json", {}, function (data) {
+                    $("#review").text(data.casablanca.review);
+                    $("#rating").text(data.casablanca.rating + " / 5");
+                });
+
+                $.getJSON("../../prices.json", {}, function (data) {
+                    $("#price").text("$" + data.casablanca.price);
+                });
+                
+                $.getJSON("../../usernames.json", {}, function (data) {
+                    $("#username").text(data.casablanca.user);
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="casablanca_info.html#" style="color: lightgray">SmartlingHotels</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="../../browse-hotels.html">Browse Hotels</a></li>
+                        <li><a href="../../about-us.html"> About Us</a></li>
+                        <li><a href="../../contact-info.html">Customer Support</a></li>
+                        <li><a href="../../site-map.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron bg"  style="width: 100%; margin-top: 2%;">
+            <div style="background: rgba(0,0,0,.22); height: inherit; width: inherit;">
+                <h1 class="" style="text-align: center; color: white; 
+                    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;">
+                    SmartlingHotels
+                </h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 1% auto;">
+                <div class="center-block" style="max-width: fit-content;">
+                    <a class="btn btn-primary" href="../../hotel-results.html" role="button">Return to Search</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8" style="margin-bottom: 2%;">
+                    <!-- carousel-->
+                    <div class="carousel-holder">
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel" data-slide-to="2" class=""></li>
+                                <li data-target="#carousel" data-slide-to="3" class=""></li>
+                                <li data-target="#carousel" data-slide-to="4" class=""></li>
+                                <li data-target="#carousel" data-slide-to="5" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="casa1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="casa2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="casa3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="casa4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="casa5.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image img-responsive carousel-inner-content" src="casa6.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="casablanca_info.html#carousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="casablanca_info.html#carousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="h1" style="text-align: left;">
+                        <span id="roomsAvailable"></span> with prices starting at:
+                    </div>
+                    <div class="h2" style="color: red; text-align: right; font-weight: 700;"> 
+                        <span id="price"></span> per night
+                    </div>
+                    <div style="text-align: right">
+                        <a class="btn btn-primary" role="button">
+                            Click this Button to Make a Reservation
+                            <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+
+                    <hr>
+                    <!-- Customer Reviews-->
+                    <div>
+                        <div class="h2">
+                            Customer Reviews:
+                        </div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-body" style="background: #337ab7; color: white;">
+                                <div class="row col-md-12">
+                                    <blockquote>
+                                        <!--Review-->
+                                        <p><em id="review"></em></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="panel-footer" style="background: white;">
+                                <div class="row h4">
+                                    <div class="col-md-5">
+                                        <!--Rating-->
+                                        <div id="rating" style="color: blue; font-weight:900;"></div>
+                                    </div>
+                                    <div class="col-md-7" style="text-align: right">
+                                        <!--User-->
+                                        Review by: <a id="username"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary es-only" id="es-only">
+                            <div class="panel-body" style="background: #337ab7; color: white;">
+                                <div class="row col-md-12">
+                                    <blockquote>
+                                        <p><em>Hotel con excelente ubicación. Desayuno muy correcto. Y el queso y vino de la tarde, también. Staff muy amable y profesional. El único punto negativo es el ruido que llega a las habitaciones que dan a la calle, sobre todo de los camiones de recogida de residuos de los locales adyacentes con el pitido de la marcha atrás... Las habitaciones de 1Queen bed quizá son un poco justas de espacio para 2. La 1 King size, perfecta. De cualquier modo, creo que es de las mejores opciones de alojamiento en la zona y para visitar NYC.</em></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="panel-footer" style="background: white;">
+                                <div class="row h4">
+                                    <div class="col-md-8">
+                                        <div style="color: blue; font-weight:900;">4.8 / 5</div>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: right">
+                                        Review by: <a>Amanda-Barcelona</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="h1"> Casablanca Hotel - Times Square</div> <hr>
+                    <div class="h4">Location: <span class="notranslate"><br><small>147 West 43rd Street <br>New York, NY 10036</small></span></div>
+                    <p>The Casablanca Hotel Times Square is an intimate European-style family-owned boutique hotel in New York City's most popular location, Midtown Manhattan, where guests can escape from the hustle and bustle of the city and relax in front of a fireplace at Rick's Café, the Casablanca Hotel's warm and welcoming upstairs club room. Rick's Café serves complimentary refreshments 24 hours a day, including deluxe continental breakfast each morning and wine & cheese receptions every evening from 5 p.m. to 8 p.m.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
