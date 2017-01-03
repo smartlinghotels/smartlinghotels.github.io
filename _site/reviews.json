@@ -1,0 +1,29 @@
+{
+    "sl_translate": "sl_all",
+    
+    "hyatt": {
+            "review":"I had heard and read a lot about this hotel so I had high expectations.  I am happy to say they were more than surpassed.  I have stayed at many hotels and I can honestly say this was the best experience I have ever had from top to bottom.  From the service, to the attention to detail, to the quality of the product as a whole. this was a weekend I will always remember.  I want to give special recognition to Amy who checked us in and remembered specific details about what we were doing during our stay.  It's personalized service like that which makes you feel like more than just another guest.  I will definitely be returning here and recommending it to everyone.",
+            "rating": 4.8
+    },
+    
+    "crosby": {
+            "review": "We stayed at the Crosby Street hotel as we are great fans of Firmdale and often stay at the Haymarket Hotel in London. Stepping through the doors upon our arrival, we felt immediately at home. All the staff in the reception area, including the butler for the sitting room, were introduced to us by name. It was a nice feeling. We ordered room service, which was prompt and delicious, and settled down for a great stay. The concierge were fantastic at recommending museums, quickly ordering cabs, and making sure we were happy when our helicopter tour was rained off. Our experience was great. We would highly recommended.",
+            "rating": 4.9
+    },
+    
+    "sherry": {
+        "review":"I loved my stay at the Sherry Netherland! I can see first hand why it receives such amazing reviews on Trip Advisor. The place really is so charming, from the decor in the lobby, to the elevator attendants, to the beautiful rooms and lovely welcome chocolates. The staff at the concierge were lovely and very accommodating. I loved the location being so close to Central Park which is one of my favourite parts of NYC. The free wifi and complimentary sodas and waters were a lovely touch! Next time I am in New York this will be the place I stay!",
+        "rating":5
+    },
+
+    "casablanca": {
+        "review":"There's nothing to add to the 100% approval from most guests before me - just to say thank you for their wonderful reviews that allowed me to DARE to be so near Times Square as without assurances of attainable quiet & staff consideration I'd not even have tried. I'd looked at everything from high towers to apartments in an attempt to get quiet & dark to allow me to sleep. I was losing heart til I began to speak to a particular member of staff via long distance call and email. Not for one moment did I doubt the kind real listening skills of this person (nor in the event any fellow colleagues). All Casablanca was delightful: the breakfasts were wonderful [who would be able to face cooked food after NYC dinners?], the coffee top notch [try boosting the filter one with a shot of espresso, or like me have a double espresso from the quality machine & top it up]; the 5-8 drinks & food reception - yes it merits this title - became the thing we looked forward to most every day; the staff at both repasts were quite uniquely delightful; back to reception no advice, directions, bookings were too much trouble & saved us time & made us confident in the Big Apple. I'd spent my 21st birthday in NYC before the Twin Towers opened; this was a return as a nod to a big anniversary that fulfilled every expectation - mainly because our hotel became our home, & its staff our mentors.",
+        "rating":4.9
+    },
+
+    "broome": {
+        "review":"What a great boutique hotel in the heart of Soho. The staff were welcoming and attentive from the get go and were great throughout our 5 day stay. The hotel is near a few subway stations which makes it easy to get around the city and is near great shopping, eateries and bars. Breakfast is great and sets you up each morning with the NY Times, fresh pastries, fresh juice, fresh coffee and ready made granola and yoghurt. It is a boutique hotel so there only 40 odd rooms but the price we booked at was very competitive. There's great artwork all around and the inner courtyard is beautiful. The rooms are of reasonable size, and the large queen size bed is very comfortable. There are lovely little touches all around from the hand written welcome note to ferrero rocher chocolates at the bedside and a range of high end toiletries. A great stay and would stay again. Top marks.",
+        "rating":4.9
+    }
+       
+}
